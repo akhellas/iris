@@ -4,8 +4,11 @@ import (
 	"net/http"
 )
 
-// Adapter yype
+// Adapter type
 type Adapter func(http.Handler) http.Handler
+
+// ContextKey type
+type ContextKey string
 
 // Adapt function
 func Adapt(h http.Handler, adapters ...Adapter) http.Handler {
